@@ -2,9 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94f41721-6964-4374-b890-b9e6bac7a950" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/games/src/main.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/games/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/games/src/lib.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/games/target/debug/.fingerprint/games-0cd318631fbb55bb/lib-games-0cd318631fbb55bb" beforeDir="false" afterPath="$PROJECT_DIR$/games/target/debug/.fingerprint/games-0cd318631fbb55bb/lib-games-0cd318631fbb55bb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/games/target/debug/.fingerprint/games-0cd318631fbb55bb/lib-games-0cd318631fbb55bb.json" beforeDir="false" afterPath="$PROJECT_DIR$/games/target/debug/.fingerprint/games-0cd318631fbb55bb/lib-games-0cd318631fbb55bb.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/games/target/debug/.fingerprint/games-4789d9ba7bc47b2c/bin-games-4789d9ba7bc47b2c" beforeDir="false" afterPath="$PROJECT_DIR$/games/target/debug/.fingerprint/games-4789d9ba7bc47b2c/bin-games-4789d9ba7bc47b2c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/games/target/debug/.fingerprint/games-4789d9ba7bc47b2c/bin-games-4789d9ba7bc47b2c.json" beforeDir="false" afterPath="$PROJECT_DIR$/games/target/debug/.fingerprint/games-4789d9ba7bc47b2c/bin-games-4789d9ba7bc47b2c.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/games/target/debug/deps/games-4789d9ba7bc47b2c.exe" beforeDir="false" afterPath="$PROJECT_DIR$/games/target/debug/deps/games-4789d9ba7bc47b2c.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/games/target/debug/deps/games-4789d9ba7bc47b2c.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/games/target/debug/deps/games-4789d9ba7bc47b2c.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/games/target/debug/deps/libgames-0cd318631fbb55bb.rlib" beforeDir="false" afterPath="$PROJECT_DIR$/games/target/debug/deps/libgames-0cd318631fbb55bb.rlib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/games/target/debug/games.exe" beforeDir="false" afterPath="$PROJECT_DIR$/games/target/debug/games.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/games/target/debug/games.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/games/target/debug/games.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/games/target/debug/incremental/games-1j5evfntvo01i/s-f3l46isurl-a18g3t-9ewxoidu6g3u/1y16o1qfye96o7m0.bc.z" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/games/target/debug/incremental/games-1j5evfntvo01i/s-f3l46isurl-a18g3t-9ewxoidu6g3u/1y16o1qfye96o7m0.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/games/target/debug/incremental/games-1j5evfntvo01i/s-f3l46isurl-a18g3t-9ewxoidu6g3u/dep-graph.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/games/target/debug/incremental/games-1j5evfntvo01i/s-f3l46isurl-a18g3t-9ewxoidu6g3u/query-cache.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/games/target/debug/incremental/games-1j5evfntvo01i/s-f3l46isurl-a18g3t-9ewxoidu6g3u/work-products.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/games/target/debug/incremental/games-1j5evfntvo01i/s-f3l46isurl-a18g3t.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/games/target/debug/incremental/games-2x8f8mksry5vb/s-f3l46ixjk2-ejbp1s-3hqcln7tvehhx/10ygozpgsu0ud2lu.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/games/target/debug/incremental/games-2x8f8mksry5vb/s-f3l46ixjk2-ejbp1s-3hqcln7tvehhx/1y16o1qfye96o7m0.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/games/target/debug/incremental/games-2x8f8mksry5vb/s-f3l46ixjk2-ejbp1s-3hqcln7tvehhx/2nlz40juoewoyo1m.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/games/target/debug/incremental/games-2x8f8mksry5vb/s-f3l46ixjk2-ejbp1s-3hqcln7tvehhx/3rngp6bm2u2q5z0y.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/games/target/debug/incremental/games-2x8f8mksry5vb/s-f3l46ixjk2-ejbp1s-3hqcln7tvehhx/4oc10dk278mpk1vy.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/games/target/debug/incremental/games-2x8f8mksry5vb/s-f3l46ixjk2-ejbp1s-3hqcln7tvehhx/dep-graph.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/games/target/debug/incremental/games-2x8f8mksry5vb/s-f3l46ixjk2-ejbp1s-3hqcln7tvehhx/query-cache.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/games/target/debug/incremental/games-2x8f8mksry5vb/s-f3l46ixjk2-ejbp1s-3hqcln7tvehhx/work-products.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/games/target/debug/incremental/games-2x8f8mksry5vb/s-f3l46ixjk2-ejbp1s.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/games/target/debug/libgames.rlib" beforeDir="false" afterPath="$PROJECT_DIR$/games/target/debug/libgames.rlib" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,25 +48,25 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="rs" value="2" />
+          <entry key="rs" value="3" />
           <entry key="toml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Rust" value="2" />
+          <entry key="Rust" value="3" />
           <entry key="TOML file" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="rs" value="1414" />
+          <entry key="rs" value="1798" />
           <entry key="toml" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Rust" value="1414" />
+          <entry key="Rust" value="1798" />
           <entry key="TOML file" value="2" />
         </counts>
       </usages-collector>
@@ -53,26 +77,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/games/src/lib.rs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="55" column="42" selection-start-line="55" selection-start-column="42" selection-end-line="55" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/games/src/main.rs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/games/Cargo.toml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+            <state relative-caret-position="528">
+              <caret line="88" selection-start-line="88" selection-end-line="88" />
             </state>
           </provider>
         </entry>
@@ -113,8 +119,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -143,7 +149,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533517277510" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533599170502" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -211,16 +217,17 @@
       <updated>1533406288374</updated>
       <workItem from="1533406298576" duration="1992000" />
       <workItem from="1533515521270" duration="1942000" />
+      <workItem from="1533598408092" duration="1326000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3934000" />
+    <option name="totallyTimeSpent" value="5190000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25340393" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2647504" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -235,7 +242,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.3295082" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.9557377" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -271,10 +278,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/the_games/src/lib.rs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="11" column="25" lean-forward="true" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/games/src/lib.rs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="55" column="42" selection-start-line="55" selection-start-column="42" selection-end-line="55" selection-end-column="42" />
+        <state relative-caret-position="528">
+          <caret line="88" selection-start-line="88" selection-end-line="88" />
         </state>
       </provider>
     </entry>

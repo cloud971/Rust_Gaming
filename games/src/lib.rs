@@ -1,4 +1,3 @@
-use std::collections::HashSet;
 
 // 2 player hangman
 pub struct Hangman{
@@ -7,8 +6,7 @@ pub struct Hangman{
     player2:String,
     the_phrase: Vec<char>,
     temp:Vec<char>, // temp string to hold underscores of word, ex: _ _ _
-    letters:HashSet<char>, // set of letters from the word
-    guessed:HashSet<char>, // set of guessed letters
+    guessed:Vec<char>, // set of guessed letters
     points:i32, // keeps track of wrong guesses
 }
 
@@ -26,12 +24,11 @@ impl Hangman{
         // initialize temp as equal size vector of underscores
         let phrase_vec: Vec<char> = guess_word.chars().collect();
         let mut underscore_vec: Vec<char> = Vec::new();
-        let mut letters_init: HashSet<char> = HashSet::new();
 
         for i in 0..phrase_vec.len(){
             if phrase_vec[i].is_alphanumeric() {
                 underscore_vec.push('_');
-                letters_init.insert(phrase_vec[i]);
+
             }
         }
         
@@ -44,30 +41,10 @@ impl Hangman{
             the_phrase:phrase_vec, // change to vector
             temp:underscore_vec,   // change to vector
             points:0,
-            letters:letters_init,
-            guessed:HashSet::new(),
+            guessed:Vec::new(),
         }
     }
 
-    // replaces the word with underscore
-
-    pub fn underscore_word(&mut self) -> Result<String,i32>{
-
-        // finds and replace all the letters/numbers with "_" in the phrase that is being guessed
-        /* for c in self.the_phrase.chars() {
-
-            if c.is_alphanumeric() {
-                self.temp.push('_');
-                self.letters.insert(c);
-            }
-        } */
-
-        match self.temp.len() {
-
-            0 => Err(0),
-            _ => Ok("Success".to_string()),
-        }
-    }
 }
 
 // will be called in the test file
@@ -75,12 +52,10 @@ pub fn test_build(p1:String, p2:String, guess_word:String) -> Hangman {
 
     let phrase_vec: Vec<char> = guess_word.chars().collect();
     let mut underscore_vec: Vec<char> = Vec::new();
-    let mut letters_init: HashSet<char> = HashSet::new();
 
     for i in 0..phrase_vec.len(){
         if phrase_vec[i].is_alphanumeric() {
             underscore_vec.push('_');
-            letters_init.insert(phrase_vec[i]);
         }
     }
     
@@ -93,7 +68,50 @@ pub fn test_build(p1:String, p2:String, guess_word:String) -> Hangman {
         the_phrase: phrase_vec,
         temp: underscore_vec,
         points:0,
-        letters:letters_init,
-        guessed:HashSet::new(),
+        guessed:Vec::new(),
     }
+}
+
+pub fn zero_points(){
+
+        println!(" _________ ");
+        println!("|         |");
+        println!("|          ");
+        println!("           ");
+}
+
+pub fn one_point(){
+
+        println!(" _________    ");
+        println!("|         |   ");
+        println!("|         @   ");
+}
+
+pub fn two_points (){
+
+        println!(" _________    ");
+        println!("|         |   ");
+        println!("|         @   ");
+        println!("          |   ");
+        println!("              ");
+
+
+}
+
+pub fn show_right_points(){
+
+        println!(" _________    ");
+        println!("|         |   ");
+        println!("|         @   ");
+        println!("         /|   ");
+    }
+
+pub fn die(){
+
+        println!(" _________    ");
+        println!("|         |   ");
+        println!("|         @   ");
+        println!("         /|\\ ");
+        println!("        * | * ");
+        println!("        _/ \\_");
 }
