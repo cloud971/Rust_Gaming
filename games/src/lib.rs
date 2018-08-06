@@ -7,7 +7,6 @@ struct Hangman{
     player2:String,
     the_phrase:String,
     temp:String, // temp string to hold underscores of word, ex: _ _ _
-    board:String, // underscore word
     letters:HashSet<char>, // set of letters from the word
     guessed:HashSet<char>, // set of guessed letters
     points:i32, // keeps track of wrong guesses
@@ -31,7 +30,6 @@ impl Hangman{
             the_phrase:guess_word,
             temp:"".to_string(),
             points:0,
-            board:"".to_string(),
             letters:HashSet::new(),
             guessed:HashSet::new(),
         }
