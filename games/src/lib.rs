@@ -1,4 +1,3 @@
-
 // 2 player hangman
 pub struct Hangman{
 
@@ -19,23 +18,22 @@ impl Hangman{
       player 1 is doing the guessing
       points is always 0 because no misses in the beginning
     */
+
     pub fn new(p1:String,p2:String,guess_word:String)-> Hangman{
         // code to split string into vector
         // initialize temp as equal size vector of underscores
         let phrase_vec: Vec<char> = guess_word.chars().collect();
         let mut underscore_vec: Vec<char> = Vec::new();
 
-        for i in 0..phrase_vec.len(){
+        for i in 0..phrase_vec.len() {
             if phrase_vec[i].is_alphanumeric() {
                 underscore_vec.push('_');
-
+            }else{
+                underscore_vec.push(' ');
             }
         }
-        
-        
 
         Hangman{
-
             player1:p1,
             player2:p2,
             the_phrase:phrase_vec, // change to vector
@@ -45,6 +43,15 @@ impl Hangman{
         }
     }
 
+    // takes letter from user and validates
+    pub fn make_move(&mut self,char_choice:char){
+
+    }
+
+    // shows the underscore word and hangman dude
+    pub fn show_board(&self){
+
+    }
 }
 
 // will be called in the test file
