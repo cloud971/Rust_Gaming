@@ -74,44 +74,108 @@ pub fn test_build(p1:String, p2:String, guess_word:String) -> Hangman {
 
 pub fn zero_points(){
 
-        println!(" _________ ");
-        println!("|         |");
-        println!("|          ");
-        println!("           ");
+    println!(" _________ ");
+    println!("|         |");
+    println!("|          ");
+    println!("           ");
 }
 
 pub fn one_point(){
 
-        println!(" _________    ");
-        println!("|         |   ");
-        println!("|         @   ");
+    println!(" _________    ");
+    println!("|         |   ");
+    println!("|         @   ");
 }
 
 pub fn two_points (){
 
-        println!(" _________    ");
-        println!("|         |   ");
-        println!("|         @   ");
-        println!("          |   ");
-        println!("              ");
-
-
+    println!(" _________    ");
+    println!("|         |   ");
+    println!("|         @   ");
+    println!("          |   ");
+    println!("              ");
 }
 
-pub fn show_right_points(){
+pub fn three_points(){
 
-        println!(" _________    ");
-        println!("|         |   ");
-        println!("|         @   ");
-        println!("         /|   ");
-    }
+    println!(" _________    ");
+    println!("|         |   ");
+    println!("|         @   ");
+    println!("         /|   ");
+}
 
-pub fn die(){
+pub fn four_points(){
 
-        println!(" _________    ");
-        println!("|         |   ");
-        println!("|         @   ");
-        println!("         /|\\ ");
-        println!("        * | * ");
-        println!("        _/ \\_");
+    println!(" _________    ");
+    println!("|         |   ");
+    println!("|         @   ");
+    println!("         /|   ");
+    println!("          |   ");
+}
+
+pub fn five_points(){
+
+    println!(" _________    ");
+    println!("|         |   ");
+    println!("|         @   ");
+    println!("         /|\\  ");
+    println!("          |   ");
+}
+
+pub fn six_points(){
+
+    println!(" _________    ");
+    println!("|         |   ");
+    println!("|         @   ");
+    println!("         /|\\ ");
+    println!("          | * ");
+}
+
+pub fn seven_points(){
+
+    println!(" _________    ");
+    println!("|         |   ");
+    println!("|         @   ");
+    println!("         /|\\ ");
+    println!("        * | * ");
+}
+
+pub fn eight_points(){
+
+    println!(" _________    ");
+    println!("|         |   ");
+    println!("|         @   ");
+    println!("         /|\\ ");
+    println!("        * | * ");
+    println!("         /    ");
+}
+
+fn nine_points(){
+
+    println!(" _________    ");
+    println!("|         |   ");
+    println!("|         @   ");
+    println!("         /|\\ ");
+    println!("        * | * ");
+    println!("        _/    ");
+}
+
+fn ten_points(){
+
+    println!(" _________    ");
+    println!("|         |   ");
+    println!("|         @   ");
+    println!("         /|\\ ");
+    println!("        * | * ");
+    println!("        _/ \\ ");
+}
+
+fn eleven_points(){
+
+    println!(" _________    ");
+    println!("|         |   ");
+    println!("|         @   ");
+    println!("         /|\\ ");
+    println!("        * | * ");
+    println!("        _/ \\_");
 }
