@@ -28,8 +28,10 @@ impl Hangman {
         for i in 0..phrase_vec.len() {
             if phrase_vec[i].is_alphanumeric() {
                 underscore_vec.push('_');
-            } else {
+            }else if phrase_vec[i].is_whitespace(){
                 underscore_vec.push(' ');
+            }else {
+                underscore_vec.push(phrase_vec[i]);
             }
         }
 
@@ -93,6 +95,10 @@ impl Hangman {
             12 => println!("Game over\n"),
             _ => println!("Try again\n"),
         }
+
+        for i in 0..self.temp.len(){
+            print!("{} ",self.temp[i]);
+        }
     }
 }
 
@@ -105,12 +111,11 @@ pub fn test_build(p1:String, p2:String, guess_word:String) -> Hangman {
     for i in 0..phrase_vec.len(){
         if phrase_vec[i].is_alphanumeric() {
             underscore_vec.push('_');
-        }
+        }else if phrase_vec[i].is_whitespace(){
+            underscore_vec.push(' ');
+        }else { underscore_vec.push(phrase_vec[i]); }
     }
     
-    println!("{:?}", phrase_vec);
-    println!("{:?}", underscore_vec);
-
     Hangman {
         player1: p1,
         player2: p2,
