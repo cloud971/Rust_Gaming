@@ -1,5 +1,5 @@
 // 2 player hangman
-pub struct Hangman{
+pub struct Hangman {
 
     player1:String,
     player2:String,
@@ -11,7 +11,7 @@ pub struct Hangman{
 
 
 // member functions for hangman struct
-impl Hangman{
+impl Hangman {
 
     /*creates a new hangman obj and initializes
       takes 3 arguments, player names and the string to be guessed
@@ -19,7 +19,7 @@ impl Hangman{
       points is always 0 because no misses in the beginning
     */
 
-    pub fn new(p1:String,p2:String,guess_word:String)-> Hangman{
+    pub fn new(p1:String,p2:String,guess_word:String)-> Hangman {
         // code to split string into vector
         // initialize temp as equal size vector of underscores
         let phrase_vec: Vec<char> = guess_word.chars().collect();
@@ -28,29 +28,71 @@ impl Hangman{
         for i in 0..phrase_vec.len() {
             if phrase_vec[i].is_alphanumeric() {
                 underscore_vec.push('_');
-            }else{
+            } else {
                 underscore_vec.push(' ');
             }
         }
 
-        Hangman{
+        Hangman {
             player1:p1,
             player2:p2,
-            the_phrase:phrase_vec, // change to vector
-            temp:underscore_vec,   // change to vector
+            the_phrase:phrase_vec, 
+            temp:underscore_vec,   
             points:0,
             guessed:Vec::new(),
         }
     }
 
-    // takes letter from user and validates
-    pub fn make_move(&mut self,char_choice:char){
 
+    pub fn make_move(&mut self,c:char){
+        /* 
+        Checks first if the guessed letter is in the guessed vector,
+        then if not, checks if the guessed letter in the phrase_vector array.
+        If so it will replace the underscore in underscore_vec with the letter
+        at the appropriate index and add the letter to the guessed vector.
+        */
+        if self.guessed.contains(&c) {
+            println!("You have already guessed that letter!")
+        }
+        else {
+            self.guessed.push(c);
+            for i in 0..self.the_phrase.len() {
+                if self.the_phrase[i] == c {
+                    self.temp[i] = c;
+                }
+            }
+        }
     }
 
-    // shows the underscore word and hangman dude
-    pub fn show_board(&self){
 
+    pub fn show_board(&self){
+        /*
+        Will calculate the score by checking how many elements are in guessed
+        but not in the_phrase. It will be equal to |guessed| - |guessed intersection phrase|
+        */
+        let mut score = 0i32;
+        for i in 0..self.guessed.len() {
+            if !self.the_phrase.contains(&self.guessed[i]) {
+                score += 1;
+            }
+        }
+
+        match score {
+            0 => zero_points(),
+            1 => one_point(),
+            2 => two_points(),
+            3 => three_points(),
+            4 => four_points(),
+            5 => five_points(),
+            6 => six_points(),
+            7 => seven_points(),
+            8 => eight_points(),
+            9 => nine_points(),
+            10 => ten_points(),
+            11 => eleven_points(),
+            12 => println!("Game over\n"),
+            _ => println!("Try again\n"),
+        }
     }
 }
 
@@ -69,7 +111,7 @@ pub fn test_build(p1:String, p2:String, guess_word:String) -> Hangman {
     println!("{:?}", phrase_vec);
     println!("{:?}", underscore_vec);
 
-    Hangman{
+    Hangman {
         player1: p1,
         player2: p2,
         the_phrase: phrase_vec,
@@ -80,7 +122,7 @@ pub fn test_build(p1:String, p2:String, guess_word:String) -> Hangman {
 }
 
 pub fn zero_points(){
-
+    println!("Your hangman board: \n");
     println!(" _________ ");
     println!("|         |");
     println!("|          ");
@@ -88,14 +130,14 @@ pub fn zero_points(){
 }
 
 pub fn one_point(){
-
+    println!("Your hangman board: \n");
     println!(" _________    ");
     println!("|         |   ");
     println!("|         @   ");
 }
 
 pub fn two_points (){
-
+    println!("Your hangman board: \n");
     println!(" _________    ");
     println!("|         |   ");
     println!("|         @   ");
@@ -104,7 +146,7 @@ pub fn two_points (){
 }
 
 pub fn three_points(){
-
+    println!("Your hangman board: \n");
     println!(" _________    ");
     println!("|         |   ");
     println!("|         @   ");
@@ -112,7 +154,7 @@ pub fn three_points(){
 }
 
 pub fn four_points(){
-
+    println!("Your hangman board: \n");
     println!(" _________    ");
     println!("|         |   ");
     println!("|         @   ");
@@ -121,7 +163,7 @@ pub fn four_points(){
 }
 
 pub fn five_points(){
-
+    println!("Your hangman board: \n");
     println!(" _________    ");
     println!("|         |   ");
     println!("|         @   ");
@@ -130,7 +172,7 @@ pub fn five_points(){
 }
 
 pub fn six_points(){
-
+    println!("Your hangman board: \n");
     println!(" _________    ");
     println!("|         |   ");
     println!("|         @   ");
@@ -139,7 +181,7 @@ pub fn six_points(){
 }
 
 pub fn seven_points(){
-
+    println!("Your hangman board: \n");
     println!(" _________    ");
     println!("|         |   ");
     println!("|         @   ");
@@ -148,7 +190,7 @@ pub fn seven_points(){
 }
 
 pub fn eight_points(){
-
+    println!("Your hangman board: \n");
     println!(" _________    ");
     println!("|         |   ");
     println!("|         @   ");
@@ -158,7 +200,7 @@ pub fn eight_points(){
 }
 
 fn nine_points(){
-
+    println!("Your hangman board: \n");
     println!(" _________    ");
     println!("|         |   ");
     println!("|         @   ");
@@ -168,7 +210,7 @@ fn nine_points(){
 }
 
 fn ten_points(){
-
+    println!("Your hangman board: \n");
     println!(" _________    ");
     println!("|         |   ");
     println!("|         @   ");
@@ -178,7 +220,7 @@ fn ten_points(){
 }
 
 fn eleven_points(){
-
+    println!("Your hangman board: \n");
     println!(" _________    ");
     println!("|         |   ");
     println!("|         @   ");
