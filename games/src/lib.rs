@@ -1,4 +1,3 @@
-extern crate parity_wordlist;
 
 // 2 player hangman
 pub struct Hangman {
@@ -117,6 +116,149 @@ impl Hangman {
         }
     }
 }
+
+// for tic tac toe
+pub struct tictac{
+    board:Vec<Vec<String>>,
+    moves:Vec<u32>,
+}
+
+impl tictac{
+
+    // constructor
+    pub fn new()->tictac{
+
+        /*
+        each square is a number the vector 'moves' holds
+        9 numbers for each square
+        */
+        let mut tic_tac = vec![vec!["[ ]".to_string(),"[ ]".to_string(),"[ ]".to_string()],
+                               vec!["[ ]".to_string(),"[ ]".to_string(),"[ ]".to_string()],
+                               vec!["[ ]".to_string(),"[ ]".to_string(),"[ ]".to_string()]];
+
+        // keeps track of move
+        let mut the_moves = vec![1,2,3,4,5,6,7,8,9];
+
+        tictac{
+            board:tic_tac,
+            moves:the_moves,
+        }
+    }
+
+    // marking the board
+    pub fn mark_player(&mut self,position:u32,player:u32) ->bool{
+
+        let mut xo = String::new();
+
+        if player == 1 {
+            xo = "[O]".to_string();
+        }else {
+            xo = "[X]".to_string();
+        }
+
+        if self.moves.contains(&position){
+
+            match position{
+
+                1=> self.board[0][0] = xo.to_string(),
+                2=> self.board[0][1] = xo.to_string(),
+                3=> self.board[0][2] = xo.to_string(),
+                4=> self.board[1][0] = xo.to_string(),
+                5=> self.board[1][1] = xo.to_string(),
+                6=> self.board[1][2] = xo.to_string(),
+                7=> self.board[2][0] = xo.to_string(),
+                8=> self.board[2][1] = xo.to_string(),
+                9=> self.board[2][2] = xo.to_string(),
+                _=> (),
+            }
+
+            //removes the number from the 'moves_left' vector so it can't be marked again
+            self.moves.retain(|&x| x !=  position);
+            true
+        }else{ // the square was already marked
+            println!("Try again");
+            false
+        }
+    }
+/*
+    pub fn mark_player2(&mut self,position:u32) ->bool{
+
+        let xo = "[X]".to_string();
+        if self.moves.contains(&position){
+
+            match position{
+
+                1=> self.board[0][0] = xo.to_string(),
+                2=> self.board[0][1] = xo.to_string(),
+                3=> self.board[0][2] = xo.to_string(),
+                4=> self.board[1][0] = xo.to_string(),
+                5=> self.board[1][1] = xo.to_string(),
+                6=> self.board[1][2] = xo.to_string(),
+                7=> self.board[2][0] = xo.to_string(),
+                8=> self.board[2][1] = xo.to_string(),
+                9=> self.board[2][2] = xo.to_string(),
+                _=> (),
+            }
+
+            //removes the number from the 'moves_left' vector so it can't be marked again
+            self.moves.retain(|&x| x !=  position);
+            true
+        }else{ // the square was already marked
+            println!("Try again");
+            false
+        }
+    }
+*/
+    pub fn check_win(&self)->String{
+
+        /*
+        first three cases check for 3 in a row
+        second three cases check for 3 columns
+        next two cases check for diagonals
+        last case says no one has won
+        */
+        if self.board[0][0]!= "[ ]".to_string() && self.board[0][0] == self.board[0][1] && self.board[0][2] == self.board[0][0]{
+            self.board[0][0].clone()
+        }else if self.board[1][0]!= "[ ]".to_string()&&self.board[1][0] == self.board[1][1] && self.board[1][2] == self.board[1][0]{
+            self.board[1][0].clone()
+        }else if self.board[2][0]!= "[ ]".to_string()&&self.board[2][0] == self.board[2][1] && self.board[2][2] == self.board[2][0]{
+            self.board[2][0].clone()
+        }else if self.board[0][0]!= "[ ]".to_string()&&self.board[1][0] == self.board[0][0] && self.board[2][0] == self.board[0][0]{
+            self.board[0][0].clone()
+        }else if self.board[0][1]!= "[ ]".to_string()&&self.board[0][1] == self.board[2][1] && self.board[0][1] == self.board[2][1]{
+            self.board[0][1].clone()
+        }else if self.board[0][2]!= "[ ]".to_string()&&self.board[0][2] == self.board[2][2] && self.board[0][2] == self.board[2][2]{
+            self.board[0][2].clone()
+        }else if self.board[0][0]!= "[ ]".to_string()&&self.board[0][0] == self.board[1][1] && self.board[0][0] == self.board[2][2]{
+            self.board[0][0].clone()
+        }else if self.board[2][0]!= "[ ]".to_string()&&self.board[2][0] == self.board[1][1] && self.board[2][0] == self.board[0][2]{
+            self.board[2][0].clone()
+        }else{
+            "z".to_string()
+        }
+    }
+
+    pub fn moves_left(&self) -> bool{
+
+        if self.moves.is_empty(){
+            false
+        }else { true }
+    }
+
+
+    pub fn tic_board(&self){
+
+        for x in self.board.iter(){
+            for things in x{
+
+                print!("{}",things);
+            }
+            println!("\n");
+        }
+    }
+
+}
+
 
 // will be called in the test file
 pub fn test_build(p1: String, p2: String, guess_word: String) -> Hangman {

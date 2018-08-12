@@ -1,4 +1,4 @@
-extern crate games as hangman;
+extern crate games as Games;
 use std::io;
 
 fn main() {
@@ -99,7 +99,7 @@ fn one_on_one(){
     phrase.truncate(remove_end);
     let char_vec: Vec<char> = phrase.chars().collect();
     */
-    let mut tester = hangman::Hangman::new(player1, player2, phrase);
+    let mut tester = Games::Hangman::new(player1, player2, phrase);
 
     while tester.get_score() != 2 && tester.get_score() !=1{
 
@@ -123,4 +123,74 @@ fn one_vs_cpu(){
 
 fn tic_tac_game(){
 
+    /*
+    let mut player1 = String::new();
+    let mut player2 = String::new();
+
+    println!("Player 1 Name : ");
+
+    io::stdin().read_line(&mut player1)
+        .ok()
+        .expect("failed to read line");
+
+    let remove_end = player1.trim_right().len();
+    player1.truncate(remove_end);
+
+    println!("Player 2 Name : ");
+    io::stdin().read_line(&mut player2)
+        .ok()
+        .expect("failed to read line");
+
+    let remove_end = player2.trim_right().len();
+    player2.truncate(remove_end);
+    */
+    let mut tic_game = Games::tictac::new();
+
+    let mut count:u32 = 1;
+    let mut tie  = true;
+    while(tic_game.moves_left()){
+
+        tic_game.tic_board();
+        let mut player_move:u32 = 0;
+
+        if count %2 != 0{
+            player_move = 1;
+        }else {
+            player_move=2;
+        }
+
+        println!("Player {} enter move : ",player_move);
+
+        let mut sq_move = String::new();
+        io::stdin().read_line(&mut sq_move)
+            .ok()
+            .expect("failed to read line");
+
+        let sq_move: u32 = match sq_move.trim().parse() {
+            Ok(num) => num,
+            Err(_) => continue,
+        };
+
+        // move successful
+        if tic_game.mark_player(sq_move,player_move){
+            count += 1;
+
+            let winner = tic_game.check_win();
+
+            if  winner  == "[O]".to_string(){
+                tie = false;
+                println!("Player 1 has won!\n");
+                break;
+            }else if winner == "[X]".to_string(){
+                tie = false;
+                println!("Player 2 has won");
+                break;
+            }
+        }
+    }
+
+    match tie {
+        true => println!("Tie game!"),
+        false=>(),
+    }
 }

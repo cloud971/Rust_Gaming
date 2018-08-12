@@ -4,4 +4,3 @@ version = "0.1.0"
 authors = ["chasam <chasam@pdx.edu>"]
 
 [dependencies]
-parity-wordlist = "1.2"
