@@ -3,9 +3,9 @@
 pub struct Hangman {
     player1: String,
     player2: String,
-    the_phrase: Vec<char>,
+    pub the_phrase: Vec<char>,
     temp: Vec<char>,    // temp string to hold underscores of word, ex: _ _ _
-    guessed: Vec<char>, // set of guessed letters
+    pub guessed: Vec<char>, // set of guessed letters
     points: i32,        // keeps track of wrong guesses
 }
 
@@ -46,7 +46,7 @@ impl Hangman {
         }
     }
 
-    pub fn make_move(&mut self, c: char) {
+    pub fn make_move(&mut self, c: char) -> bool {
         /* 
         Checks first if the guessed letter is in the guessed vector,
         then if not, checks if the guessed letter in the phrase_vector array.
@@ -54,7 +54,8 @@ impl Hangman {
         at the appropriate index and add the letter to the guessed vector.
         */
         if self.guessed.contains(&c) {
-            println!("You have already guessed that letter!")
+            println!("You have already guessed that letter!");
+            return false;
         } else {
             self.guessed.push(c);
             for i in 0..self.the_phrase.len() {
@@ -63,10 +64,10 @@ impl Hangman {
                 }
             }
         }
-
+        return true;
     }
 
-    pub fn show_board(&mut self){
+    pub fn show_board(&mut self) -> bool{
         /*
         Will calculate the score by checking how many elements are in guessed
         but not in the_phrase. It will be equal to |guessed| - |guessed intersection phrase|
@@ -102,7 +103,8 @@ impl Hangman {
             self.points = 12;
         }
         else if self.points != 11{ self.points =0; }
-        else if self.points == 11{ println!("\nthe game is over {} wins\n",self.player2); }
+        else if self.points == 11{ println!("\nthe game is over {} wins\n",self.player2); return false;}
+        return true;
     }
 
 
@@ -119,8 +121,8 @@ impl Hangman {
 
 // for tic tac toe
 pub struct tictac{
-    board:Vec<Vec<String>>,
-    moves:Vec<u32>,
+    pub board:Vec<Vec<String>>,
+    pub moves:Vec<u32>,
 }
 
 impl tictac{
@@ -261,7 +263,7 @@ impl tictac{
 
 
 // will be called in the test file
-pub fn test_build(p1: String, p2: String, guess_word: String) -> Hangman {
+pub fn test_hangman(p1: String, p2: String, guess_word: String) -> Hangman {
     let phrase_vec: Vec<char> = guess_word.chars().collect();
     let mut underscore_vec: Vec<char> = Vec::new();
 
@@ -282,6 +284,22 @@ pub fn test_build(p1: String, p2: String, guess_word: String) -> Hangman {
         temp: underscore_vec,
         points: 0,
         guessed: Vec::new(),
+    }
+}
+
+
+pub fn test_tic_tac_toe() -> tictac {
+
+    let mut tic_tac = vec![vec!["[ ]".to_string(),"[ ]".to_string(),"[ ]".to_string()],
+                      vec!["[ ]".to_string(),"[ ]".to_string(),"[ ]".to_string()],
+                      vec!["[ ]".to_string(),"[ ]".to_string(),"[ ]".to_string()]];
+
+    // keeps track of move
+    let mut the_moves = vec![1,2,3,4,5,6,7,8,9];
+
+    tictac{
+        board:tic_tac,
+        moves:the_moves,
     }
 }
 
