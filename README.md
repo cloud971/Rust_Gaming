@@ -13,9 +13,9 @@ The test directory contains test files for the functionality of the game.
 
 # How to play
 
- [] [] []<br>
- [] [] []<br>
- [] [] []<br>
+ <p>[x] [] []</p>
+ <p>[] [x] []</p>
+ <p>[] [] [x]</p>
  
 To play tic-tac-toe there are 2 players required. In order to make a move the users type in number
 corresponding to the area of the bpard they want to mark. For example to mark the top left square
